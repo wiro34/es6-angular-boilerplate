@@ -1,0 +1,8 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "/jspm_packages/github/twbs/bootstrap-sass@3.3.5/assets/fonts/bootstrap/";
+
+@import "twbs/bootstrap-sass@3.3.5/assets/stylesheets/bootstrap";

@@ -1,0 +1,26 @@
+<section class="swim-lane">
+  <div class="swim-lane-title">
+    <span class="glyphicon glyphicon-file"></span> {{ctrl.name}}
+  </div>
+
+  <div class="swim-lane-content">
+    <ul dnd-list="ctrl.tasks()">
+      <li ng-repeat="task in ctrl.tasks()" class="task"
+          dnd-draggable="task"
+          dnd-moved="ctrl.removeTask(ctrl.tasks(), $index)"
+          dnd-effect-allowed="move">
+
+        <div class="task-header">
+          <a href="" ng-bind="task.title" ng-click="task.show = !task.show"></a>
+          <a href="" ng-click="ctrl.removeTask(ctrl.tasks(), $index)" class="pull-right">
+            <span class="glyphicon glyphicon-remove"></span>
+          </a>
+        </div>
+
+        <div class="task-description" ng-show="task.show">
+          <span ng-bind-html="task.description"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
